@@ -1,0 +1,9 @@
+def digui(n,a='a',b='b',c='c'):
+    if not isinstance(n,(int)):
+        raise TypeError('换成正整数！')
+    elif n==1:
+        print(a,'-->',c)
+    else:
+        digui(n-1,a,c,b)
+        dihui(1,a,b,c)
+        digui(n-1,b,a,c)
