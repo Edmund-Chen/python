@@ -1,0 +1,21 @@
+import math
+def quadratic(a,b,c):#创建新函数
+    if not isinstance(a and b and c,(int,float)):
+        raise TypeError('Bad Data Type')#不是整数或浮点数就报错
+    Delta=b**2-4*a*c#检验Delta是不是正的，不是的话两个解先等于0，之后输出无解
+    if Delta<0:
+        x1=0
+        x2=0
+        return x1,x2
+    else:
+        x1=(-b+matn.sqrt(Delta))/(2*a)
+        x2=(-b-math.sqrt(Delta))/(2*a)
+        return x1,x2
+a=int(input('输入a值:'))
+b=int(input('输入b值:'))
+c=int(input('输入c值:'))
+x1,x2=(quadratic(a,b,c))
+if x1==x2==0:
+    print('方程{}x^2+{}x+{}=0无解'.format(a,b,c))
+else:
+    print('方程{}x^2+{}x+{}=0的解为：\nx1=%.2f\nx2=%.2f'.format(a,b,c)%(x1,x2))
